@@ -1,0 +1,32 @@
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 7vw;
+  width: 1321px;
+  margin: 0;
+}
+span {
+  color: white;
+}
+ul {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 30px;
+}
+
+.link {
+  font-size: 20px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  color: inherit;
+  text-decoration: none;
+}
