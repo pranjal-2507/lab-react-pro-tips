@@ -62,12 +62,13 @@ function Forms() {
     setAlert(messageBox);
 
     if (
-      messageBox.firstName === "" &&
-      messageBox.lastName === "" &&
-      messageBox.Email === "" &&
-      messageBox.Contact === ""
+      messageBox.firstName !== "" &&
+      messageBox.lastName !== "" &&
+      messageBox.Email !== "" &&
+      messageBox.Contact !== ""
     ) {
       setRegistrationSuccess(true);
+      console.log("success")
     }
   }
 
