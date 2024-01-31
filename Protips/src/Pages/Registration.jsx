@@ -37,12 +37,14 @@ function Forms() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    let messageBox = {};
+    let messageBox = {
+      firstName: "",
+    lastName: "",
+    Email: "",
+    Contact: ""
+    };
 
     // validation
-    // if(formData.firstName==="" && formData.lastName==="" && formData.Email==="" && formData.Contact===""){
-    //   alert("Please fill all the fields")
-    // }
     if (formData.firstName === "") {
       messageBox.firstName = "Please enter your First Name";
     }
@@ -61,14 +63,18 @@ function Forms() {
 
     setAlert(messageBox);
 
+    // Check if any field is empty
     if (
-      messageBox.firstName !== "" &&
-      messageBox.lastName !== "" &&
-      messageBox.Email !== "" &&
-      messageBox.Contact !== ""
+      messageBox.firstName === "" &&
+      messageBox.lastName === "" &&
+      messageBox.Email === "" &&
+      messageBox.Contact === ""
     ) {
       setRegistrationSuccess(true);
-      console.log("success")
+      console.log("Registration Successful");
+    } else {
+      console.log("Error: Please fill all the fields");
+     
     }
   }
 
