@@ -1,12 +1,12 @@
-import React from "react";
-import Navbar from "../Components/Navbar";
-
-function Contact() {
+import React from 'react'
+import Navbar from '../Components/Navbar'
+const Contact = () => {
   return (
-    <div style={{ textAlign: "center" }}>
-      <Navbar /> Contact{" "}
+    <div>
+        <Navbar/>
+        <h1 style={{textAlign:"center"}}>CONTACT</h1>
     </div>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-
 function Forms() {
   const [alert, setAlert] = useState({
     firstName: "",
@@ -38,9 +37,12 @@ function Forms() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    let messageBox = { firstName: "", lastName: "", Email: "", Contact: "" };
+    let messageBox = {};
 
     // validation
+    // if(formData.firstName==="" && formData.lastName==="" && formData.Email==="" && formData.Contact===""){
+    //   alert("Please fill all the fields")
+    // }
     if (formData.firstName === "") {
       messageBox.firstName = "Please enter your First Name";
     }
@@ -70,8 +72,7 @@ function Forms() {
   }
 
   return (
-
-       <div className="Forms">
+    <div className="Forms">
       <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">
           <input
@@ -83,9 +84,7 @@ function Forms() {
             onFocus={() => handleFocus("firstName")}
             placeholder="Enter your First Name"
           />
-          <div className="error-message">
-            {focus.firstName && alert.firstName}
-          </div>
+          <div className="error-message">{alert.firstName}</div>
         </label>
 
         <label htmlFor="lastName">
@@ -98,9 +97,7 @@ function Forms() {
             onFocus={() => handleFocus("lastName")}
             placeholder="Enter your Last Name"
           />
-          <div className="error-message">
-            {focus.lastName && alert.lastName}
-          </div>
+          <div className="error-message">{alert.lastName}</div>
         </label>
 
         <label htmlFor="Email">
@@ -113,7 +110,7 @@ function Forms() {
             onFocus={() => handleFocus("Email")}
             placeholder="Enter your Email"
           />
-          <div className="error-message">{focus.Email && alert.Email}</div>
+          <div className="error-message">{alert.Email}</div>
         </label>
 
         <label htmlFor="Contact">
@@ -126,7 +123,7 @@ function Forms() {
             onFocus={() => handleFocus("Contact")}
             placeholder="Enter your Contact Number"
           />
-          <div className="error-message">{focus.Contact && alert.Contact}</div>
+          <div className="error-message">{alert.Contact}</div>
         </label>
         <label htmlFor="">
           <input className="submit" type="submit" value={"Register"} />
